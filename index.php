@@ -35,7 +35,7 @@
                 </div>
                 <div class="field image">
                     <label>Select image</label>
-                    <input type="file">
+                    <input type="file" name="image" required>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue to chat">
@@ -46,5 +46,7 @@
     </div>
 
     <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/signup.js"></script>
+
   </body>
 </html>
