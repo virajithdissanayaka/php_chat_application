@@ -14,6 +14,25 @@
                 echo "$email - This email already exists!";
             }else{
                 //let's check user upload file or not
+                if(isset($_FILES['file'])){ //if file is uploaded
+                    $img_name = $_FILES['image']['name']; //getting user uploaded img name;   
+                    $tmp_name = $_FILES['image']['tmp_name']; //this temporary name is used to save/move file in our folder;
+                    
+                    //let's explode image and get the last extension like jpg png
+                    $img_expload = explode('.',$img_name);
+                    $img_ext = end($img_expload); //here we get the extension of an user uploaded img file
+
+                    $extensions = ['png', 'jpeg', 'jpg']; //these are some valid img ext and we've store them in array
+                    if(in_array($img_ext, $extensions) === true){ //if user uploaded img ext is matched
+                        $time = time(); //this will return us current time  
+                                        //we need this time because when you uploading user img to in our floder wee rename user file with current time 
+                                        //so all the imag file will have a unique name; 
+                    }else{
+                        echo "Please select an image file - jpeg, jpg, png!";
+                    }
+                }else{
+                    echo "Please select an image file!";
+                }
             }
         }else{
             echo "$email - This is not a valid email!";
