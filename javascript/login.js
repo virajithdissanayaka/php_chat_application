@@ -14,11 +14,16 @@ continueBtn.onclick = ()=>{
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 let data = xhr.response;
-                if(data == "success"){
-                    location.href = "index.php";
+                console.log(data);
+                if(data = "success"){
+                    // if(data == "success") This is not working here only work  if(data = "success")
+
+                    // console.log("Hello");
+                    location.href = "users.php";
                 }else{
                     errorText.textContent = data;
                     errorText.style.display = "block";
+                    // console.log("error");
                 }
             }
         }
