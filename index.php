@@ -11,9 +11,9 @@
   <body>
     <div class="wrapper">
         <section class="form signup">
-            <header>Realtime Chat App</header>
-            <form action="#" enctype="multipart/form-data">
-                <div class="error-txt">This is an error message!</div>
+            <header>SignUp</header>
+            <form action="#"  enctype="multipart/form-data">
+                <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
                         <label>First Name</label>
@@ -41,7 +41,7 @@
                     <input type="submit" value="Continue to chat">
                 </div>
             </form>
-            <div class="link">Already Signed Up? <a href="#">Login Now</a></div>    
+            <div class="link">Already Signed Up? <a href="login.php">Login Now</a></div>    
         </section>
     </div>
 

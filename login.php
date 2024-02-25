@@ -11,9 +11,9 @@
   <body>
     <div class="wrapper">
         <section class="form login">
-            <header>Realtime Chat App</header>
+            <header>LogIn</header>
             <form action="#">
-                <div class="error-txt">This is an error message!</div>
+                <div class="error-txt"></div>
                 
                 <div class="field input">
                     <label>Email Address</label>
@@ -29,10 +29,12 @@
                     <input type="submit" value="Continue to chat">
                 </div>
             </form>
-            <div class="link">Not yet signed Up? <a href="#">Signup Now</a></div>    
+            <div class="link">Not yet signed Up? <a href="index.php">Signup Now</a></div>    
         </section>
     </div>
 
     <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/login.js"></script>
+
   </body>
 </html>
