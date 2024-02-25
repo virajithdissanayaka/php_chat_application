@@ -237,7 +237,7 @@ form .name-details .field:last-child{
     /* margin-left: 100px; */
 
     position: absolute;
-    right: 50px;
+    right: 30px;
 }
 .users-list a .status-dot.offline{
     color: #ccc;

@@ -15,12 +15,20 @@ sendBtn.onclick = () => {
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
                 inputField.value = ""; //once message inserted into database then leave the input field blank
+                scrollToBottom();
             }
         }
     }    
     //we have to send the form data through ajax to php
     let formData = new FormData(form); //Creating new formData object
     xhr.send(formData); //Sending the form data to php
+}
+
+chatBox.onmouseenter = ()=>{
+    chatBox.classList.add("active");
+}
+chatBox.onmouseleave = ()=>{
+    chatBox.classList.remove("active");
 }
 
 setInterval(()=>{
@@ -32,6 +40,9 @@ setInterval(()=>{
             if(xhr.status === 200){
                 let data = xhr.response;
                 chatBox.innerHTML = data;
+                if(!chatBox.classList.contains("active")){ //if active class is not in chat box then scroll to bottom
+                    scrollToBottom();
+                }
             }
         }
     } 
@@ -40,3 +51,7 @@ setInterval(()=>{
     let formData = new FormData(form); //Creating new formData object
     xhr.send(formData); //Sending the form data to php
 }, 500); //this function will run frequently after 500ms
+
+function scrollToBottom(){
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
